@@ -1,6 +1,6 @@
 class EsunBank < ExchangeRate
-  def self.get_rates(support_curencies = nil)
-    support_curencies = get_support_curencies unless support_curencies
+  def self.get_rates(support_currencies = nil)
+    support_currencies = get_support_currencies unless support_currencies
 
     ans = {}
     url = "https://www.esunbank.com.tw/bank/personal/deposit/rate/forex/foreign-exchange-rates"
@@ -10,7 +10,7 @@ class EsunBank < ExchangeRate
     rate_set.each do |a|
       currency = nil
       currency_info = a.search('td.itemTtitle a')[0].content # USD
-      support_curencies["TWD"].each do |base|
+      support_currencies["TWD"].each do |base|
         if currency_info.include? base
           currency = base
           break
@@ -27,7 +27,7 @@ class EsunBank < ExchangeRate
     return ans
   end
 
-  def self.get_support_curencies
+  def self.get_support_currencies
     {"TWD" => ['USD', 'JPY', 'EUR', 'AUD', 'GBP']}
   end
 end

@@ -2,7 +2,10 @@
 
 Personal various exchange rate tool
 
-### Function
+## Function
 
 - Esun Bank(玉山銀行)
 - Taiwan Bank(台灣銀行)
+
+- BitoEX
+- BitoPro

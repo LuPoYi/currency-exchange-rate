@@ -1,6 +1,6 @@
 class TaiwanBank < ExchangeRate
-  def self.get_rates(support_curencies = nil)
-    support_curencies = get_support_curencies unless support_curencies
+  def self.get_rates(support_currencies = nil)
+    support_currencies = get_support_currencies unless support_currencies
 
     ans = {}
     url = "http://rate.bot.com.tw/xrt?Lang=zh-TW"
@@ -11,7 +11,7 @@ class TaiwanBank < ExchangeRate
       currency = nil
       currency_info = doms.search('td.currency div.print_hide')[0].content # USD
 
-      support_curencies["TWD"].each do |base|
+      support_currencies["TWD"].each do |base|
         if currency_info.include? base
           currency = base
           break
@@ -28,7 +28,7 @@ class TaiwanBank < ExchangeRate
     return ans
   end
 
-  def self.get_support_curencies
+  def self.get_support_currencies
     {"TWD" => ['USD', 'JPY', 'EUR', 'AUD', 'GBP']}
   end
 end
