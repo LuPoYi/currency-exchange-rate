@@ -12,6 +12,7 @@ require_relative 'lib/bitopro.rb'
 require_relative 'lib/ftx.rb'
 require_relative 'lib/bybit.rb'
 require_relative 'lib/kucoin.rb'
+require_relative 'lib/binance.rb'
 
 p TaiwanBank.get_rates
 p EsunBank.get_rates
@@ -20,6 +21,7 @@ p BitoPro.get_rates
 p Ftx.get_rates
 p Bybit.get_rates
 p Kucoin.get_rates
+p Binance.get_rates
 
 # TaiwanBank: {"USD/TWD"=>"29.5700", "GBP/TWD"=>"36.8500", "AUD/TWD"=>"20.5150", "JPY/TWD"=>"0.2752", "EUR/TWD"=>"33.2200"}
 # EsunBank: {"USD/TWD"=>"29.4600", "JPY/TWD"=>"0.2740", "EUR/TWD"=>"33.1200", "AUD/TWD"=>"20.4400", "GBP/TWD"=>"36.7400"}
@@ -28,3 +30,4 @@ p Kucoin.get_rates
 # Ftx: {"BTC/PERP"=>9024.5}
 # Bybit: {"BTC/USDT"=>"9231.00", "BTC/USD"=>"9235.00"}
 # Kucoin: {"NRG/BTC"=>"0.00022721", "BTC/USDT"=>"9232.2"}
+# Binace: {"BTC/USDT"=>"9262.00000000", "ETH/USDT"=>"237.16000000", "ADA/USDT"=>"0.10657000"}
